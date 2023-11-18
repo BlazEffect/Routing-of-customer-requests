@@ -6,10 +6,13 @@
 
 .chat-header {
     background-color: #fff;
-    padding: 10px 0;
-    position: relative;
+    padding: 10px 0;    
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     align-items: center;
+    box-shadow: 0px 4px 4px -2.5px rgba(0, 0, 0, 0.25);
 }
 
 .header__info {
@@ -39,9 +42,9 @@
 }
 
 .chat-body {
-    /*height: 100vh;*/
-    background-color: #D6D5DF;
-    padding-top: 10px;
+    background-color: #F8F8F8;
+    padding-top: 50px;
+    padding-bottom: 72px;
     flex: 1;
     overflow-y: auto;
 }
@@ -82,10 +85,13 @@
 
 .message-card__text.message-card__text--white {
     background-color: #fff;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .message-card__text.message-card__text--green {
     background-color: #4FB07A;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .message-card__time {
@@ -93,12 +99,18 @@
 }
 
 .chat-footer {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
     margin-top: auto;
 }
 
 .chat-form__input {
     height: 44px;
     width: 100%;
+    padding-left: 10px;
 }
 
 .chat-form {
@@ -113,12 +125,13 @@
 .chat-form__button {
     position: absolute;
     top: 50%;
-    right: 10px;
+    margin-left: 330px;
     transform: translateY(-50%);
     padding: 10px;
-    background-image: url("/src/assets/images/submit_button.png");
+    background-image: url("/src/assets/images/submit_button2.png");
     background-size: cover;
     color: white;
     border: none;
     cursor: pointer;
+    background-color: white ;
 }

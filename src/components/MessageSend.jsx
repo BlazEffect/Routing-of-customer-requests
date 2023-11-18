@@ -29,7 +29,7 @@ export default function MessageSend({ sendTo, messages, setMessage }) {
       <input
         type="text"
         id="userInput"
-        placeholder="Введите текст:"
+        placeholder="Введите текст"
         className="chat-form__input"
         name="userInput"
         value={userInput}
