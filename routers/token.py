@@ -1,20 +1,16 @@
-from fastapi import APIRouter
+from fastapi import FastAPI, Depends, HTTPException, status, APIRouter
+from sqlalchemy.orm import Session
+
+from models.database import authenticate_user, get_db
 from routers.auth import create_jwt_token
 
 model_router = APIRouter()
 
 
 @model_router.post('/token/')
-async def login_for_access_token(form_data: dict):
-    username = form_data["username"]
-    password = form_data["password"]
-
-    from passlib.context import CryptContext
-    pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-    hashed_password = pwd_context.hash("testpassword")
-
-    if username == "testuser" and pwd_context.verify(password, hashed_password):
+def login_for_access_token(username: str, password: str, db: Session = Depends(get_db)):
+    user = authenticate_user(db, username, password)
+    if user:
         token = create_jwt_token({"sub": username})
         return {"access_token": token, "token_type": "bearer"}
-
-    return {"error": "Invalid credentials"}
+    raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
