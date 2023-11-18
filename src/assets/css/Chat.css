@@ -108,11 +108,6 @@
 
 .chat-form__input {
     padding: 10px 40px 10px 10px;
-    border: none;
-}
-
-.chat-form__input:focus {
-    outline: none;
 }
 
 .chat-form__button {

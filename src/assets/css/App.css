@@ -5,3 +5,11 @@ body {
 a {
     text-decoration: none;
 }
+
+input {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
