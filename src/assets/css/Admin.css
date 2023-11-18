@@ -1,0 +1,49 @@
+.tickets {
+    background-color: #E3E2EE;
+    height: 100vh;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 32px;
+}
+
+.tab {
+    border: 1px solid #1A7431;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 6px 14px 6px 14px;
+    border-radius: 8px;
+}
+
+.tab.active {
+    color: #eee;
+    background-color: #1A7431;
+}
+
+.tab-content {
+    margin: 0 24px;
+}
+
+.tickets-category {
+    text-align: center;
+    margin-bottom: 32px;
+    margin-top: 0;
+    padding-top: 15%;
+}
+
+.ticket {
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.ticket-name {
+    padding: 12px 0 8px 12px;
+    font-size: 20px;
+}
+
+.ticket-message {
+    padding: 0 0 8px 19px;
+    font-size: 16px;
+}

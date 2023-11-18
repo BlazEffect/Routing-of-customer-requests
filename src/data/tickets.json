@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "name": "Тикет 1",
+    "order": 1,
+    "statusId": 1,
+    "ticketMessage": "Текст 1"
+  },
+  {
+    "id": "2",
+    "name": "Тикет 2",
+    "order": 2,
+    "statusId": 2,
+    "ticketMessage": "Текст 2"
+  },
+  {
+    "id": "3",
+    "name": "Тикет 3",
+    "order": 3,
+    "statusId": 3,
+    "ticketMessage": "Текст 3"
+  },
+  {
+    "id": "4",
+    "name": "Тикет 4",
+    "order": 2,
+    "statusId": 1,
+    "ticketMessage": "Текст 4"
+  },
+  {
+    "id": "5",
+    "name": "Тикет 5",
+    "order": 1,
+    "statusId": 2,
+    "ticketMessage": "Текст 5"
+  }
+]

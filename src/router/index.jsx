@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Main from '../pages/Main.jsx';
 import Chat from '../pages/Chat.jsx';
 import Login from '../pages/Login.jsx';
+import Admin from '../pages/Admin.jsx';
 
 
 export const routes = [
@@ -16,6 +17,10 @@ export const routes = [
     {
         path: '/login',
         element: (<Login />)
+    },
+    {
+        path: '/admin',
+        element: (<Admin />)
     }
 ]
 
