@@ -29,7 +29,6 @@ class Ticket(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, index=True)
-    prior = Column(String)
     user_id = Column(Integer, ForeignKey("users.id"))
     owner_id = Column(Integer, ForeignKey("users.id"))
 
@@ -38,7 +37,8 @@ class TicketMessage(Base):
     __tablename__ = "ticket_messages"
 
     id = Column(Integer, primary_key=True, index=True)
-    ticket_id = Column(Integer, ForeignKey("tickets.id"))  # Changed from 'ticket' to 'ticket_id'
+    ticket = Column(Integer, ForeignKey("tickets.id"))
     message = Column(String)
-    created_at = Column(Time)
-    send_to = Column(String)
+    createdAt = Column(Time)
+    sendTo = Column(String)
+

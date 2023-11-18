@@ -19,8 +19,8 @@ def classify(text):
 
 	results = {
 		"request": prediction_req[0],
-		"importance": prediction_imp[0],
-		"consult": "Шишбек"
+		"importance": prediction_imp[0]
 	}
 
 	return results
+
