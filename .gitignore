@@ -4,6 +4,6 @@ alembic/env.py
 alembic/README
 alembic/script.py.mako
 .idea
-vectors/random_forest_model_request.pkl
-vectors/random_forest_model_importance.pkl
-vectors/vector.pkl
+.\vectors\random_forest_model_request.pkl
+.\vectors\random_forest_model_importance.plk
+.\vectors\vector.plk
