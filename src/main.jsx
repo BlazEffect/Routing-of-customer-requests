@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom';
 import '../src/assets/css/Chat.css';
 import '../src/assets/css/App.css';
+import '../src/assets/css/Main.css';
 import router from './router/index.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

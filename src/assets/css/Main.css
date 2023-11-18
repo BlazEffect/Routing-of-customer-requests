@@ -1,0 +1,40 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40%;
+    text-align: center;
+}
+
+.main__greeter-text {
+    font-weight: 600;
+    font-size: 30px;
+    margin: 0;
+}
+
+.main__sub-text {
+    font-size: 20px;
+    margin: 20px 0 0;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 24px 0;
+    gap: 24px;
+}
+
+.action-button {
+    padding: 13px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.button-question {
+    color: #eee;
+    background-color: #4FB07A;
+}
+
+.button-other {
+    color: #000;
+    border: 1px solid #4FB07A;
+}
