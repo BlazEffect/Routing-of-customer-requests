@@ -95,7 +95,7 @@
 }
 
 .message-card__time {
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .chat-footer {
@@ -119,6 +119,7 @@
 }
 
 .chat-form__input {
+    width: 100%;
     padding: 10px 40px 10px 40px;
 }
 
