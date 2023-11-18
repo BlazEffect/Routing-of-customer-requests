@@ -1,4 +1,4 @@
-import Avatar from '../assets/images/avatar.png'
+import Avatar from '../assets/images/icon.png'
 
 export default function Message({ messageData }) {
   const { sendTo, createdAt, messageText } = messageData;
