@@ -5,40 +5,40 @@ Base = declarative_base()
 
 
 class User(Base):
-    __tablename__ = "users"
+	__tablename__ = "users"
 
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True)
-    email = Column(String, unique=True, index=True)
-    hashed_password = Column(String)
-    is_active = Column(Boolean, default=True)
-    is_admin = Column(Boolean, default=False)
+	id = Column(Integer, primary_key=True, index=True)
+	name = Column(String, index=True)
+	email = Column(String, unique=True, index=True)
+	hashed_password = Column(String)
+	is_active = Column(Boolean, default=True)
+	is_admin = Column(Boolean, default=False)
 
-    specialization_id = Column(Integer, ForeignKey("specializations.id"))
+	specialization_id = Column(Integer, ForeignKey("specializations.id"))
 
 
 class Specialization(Base):
-    __tablename__ = "specializations"
+	__tablename__ = "specializations"
 
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, unique=True, index=True)
+	id = Column(Integer, primary_key=True, index=True)
+	name = Column(String, unique=True, index=True)
 
 
 class Ticket(Base):
-    __tablename__ = "tickets"
+	__tablename__ = "tickets"
 
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"))
-    owner_id = Column(Integer, ForeignKey("users.id"))
+	id = Column(Integer, primary_key=True, index=True)
+	name = Column(String, index=True)
+	prior = Column(String)
+	user_id = Column(Integer, ForeignKey("users.id"))
+	owner_id = Column(Integer, ForeignKey("users.id"))
 
 
 class TicketMessage(Base):
-    __tablename__ = "ticket_messages"
+	__tablename__ = "ticket_messages"
 
-    id = Column(Integer, primary_key=True, index=True)
-    ticket = Column(Integer, ForeignKey("tickets.id"))
-    message = Column(String)
-    createdAt = Column(Time)
-    sendTo = Column(String)
-
+	id = Column(Integer, primary_key=True, index=True)
+	ticket = Column(Integer, ForeignKey("tickets.id"))
+	message = Column(String)
+	createdAt = Column(Time)
+	sendTo = Column(String)
