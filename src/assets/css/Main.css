@@ -9,6 +9,7 @@
     font-weight: 600;
     font-size: 30px;
     margin: 0;
+    padding-bottom: 30px;
 }
 
 .main__sub-text {
@@ -27,14 +28,15 @@
     padding: 13px 0;
     text-align: center;
     border-radius: 8px;
+    box-shadow: 3px 5px #25a24457;
 }
 
 .button-question {
     color: #eee;
-    background-color: #4FB07A;
+    background-color: #1A7431;
 }
 
 .button-other {
     color: #000;
-    border: 1px solid #4FB07A;
+    border: 1px solid #1A7431;
 }

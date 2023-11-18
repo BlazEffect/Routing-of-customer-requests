@@ -7,7 +7,7 @@ export default function Login() {
 
   return (
     <div className="auth">
-      <h3 className="auth__greeter-text">Вход в панель для просмотра тикетов</h3>
+      <h3 className="auth__greeter-text">Вход в административную панель</h3>
 
       <form action="" className="auth-form">
         <input
