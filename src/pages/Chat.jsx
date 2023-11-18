@@ -1,4 +1,4 @@
-import Avatar from '../assets/images/avatar.png'
+import Avatar from '../assets/images/icon1.png'
 import Arrow_back from '../assets/images/arrow_back.png'
 import Dots from '../assets/images/dots.png';
 import Messager from '../components/Messager.jsx';
