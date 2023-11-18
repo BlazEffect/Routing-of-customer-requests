@@ -1,0 +1,37 @@
+{
+  "1": {
+    "id": "1",
+    "senderName": "Тест",
+    "sendTo": "User",
+    "createdAt": "11:03",
+    "messageText": "тест"
+  },
+  "2": {
+    "id": "2",
+    "senderName": "Тест 2",
+    "sendTo": "Admin",
+    "createdAt": "11:04",
+    "messageText": "тест 2"
+  },
+  "3": {
+    "id": "3",
+    "senderName": "Тест 2",
+    "sendTo": "Admin",
+    "createdAt": "11:05",
+    "messageText": "тест 3"
+  },
+  "4": {
+    "id": "4",
+    "senderName": "Тест",
+    "sendTo": "User",
+    "createdAt": "11:07",
+    "messageText": "тест 4"
+  },
+  "5": {
+    "id": "5",
+    "senderName": "Тест 2",
+    "sendTo": "Admin",
+    "createdAt": "11:10",
+    "messageText": "тест 5"
+  }
+}

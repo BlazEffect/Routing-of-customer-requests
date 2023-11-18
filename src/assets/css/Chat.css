@@ -1,0 +1,129 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.chat-header {
+    background-color: #fff;
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+}
+
+.info__operator-avatar {
+    display: inline-block;
+}
+
+.info__operator-name {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.header__back {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.header__more {
+    position: absolute;
+    right: 0;
+    margin-right: 24px;
+}
+
+.chat-body {
+    /*height: 100vh;*/
+    background-color: #D6D5DF;
+    padding-top: 10px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.message-card:first-child {
+    margin-top: 42px;
+}
+
+.message-card {
+    display: flex;
+    align-items: center;
+    margin: 0 0 8px 24px;
+}
+
+.message-card.message-card--right {
+    margin-right: 24px;
+    flex-direction: row-reverse;
+}
+
+.message-card__avatar {
+    margin-right: 8px;
+}
+
+.message-card__text {
+    margin-right: 8px;
+}
+
+.message-card.message-card--right .message-card__text {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.message-card__text {
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.message-card__text.message-card__text--white {
+    background-color: #fff;
+}
+
+.message-card__text.message-card__text--green {
+    background-color: #4FB07A;
+}
+
+.message-card__time {
+    font-size: 12px;
+}
+
+.chat-footer {
+    margin-top: auto;
+}
+
+.chat-form__input {
+    height: 44px;
+    width: 100%;
+}
+
+.chat-form {
+    position: relative;
+    display: flex;
+}
+
+.chat-form__input {
+    padding: 10px 40px 10px 10px;
+    border: none;
+}
+
+.chat-form__input:focus {
+    outline: none;
+}
+
+.chat-form__button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-image: url("/src/assets/images/submit_button.png");
+    background-size: cover;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
