@@ -1,5 +1,6 @@
 import Button from '../components/Button.jsx';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   const [loginInput, setLoginInput] = useState();
@@ -7,7 +8,7 @@ export default function Login() {
 
   return (
     <div className="auth">
-      <h3 className="auth__greeter-text">Вход в административную панель</h3>
+      <h3 className="auth__greeter-text">Вход в<br/>административную<br/>панель</h3>
 
       <form action="" className="auth-form">
         <input
@@ -34,6 +35,12 @@ export default function Login() {
           Войти
         </Button>
       </form>
+
+      <Link to="/">
+        <Button className="action-button button-other">
+          Назад
+        </Button>
+      </Link>
     </div>
   )
 }
