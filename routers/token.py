@@ -4,10 +4,10 @@ from sqlalchemy.orm import Session
 from models.database import authenticate_user, get_db
 from routers.auth import create_jwt_token
 
-model_router = APIRouter()
+token_router = APIRouter()
 
 
-@model_router.post('/token/')
+@token_router.post('/token/')
 def login_for_access_token(username: str, password: str, db: Session = Depends(get_db)):
     user = authenticate_user(db, username, password)
     if user:

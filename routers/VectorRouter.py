@@ -5,5 +5,5 @@ model_router = APIRouter()
 
 
 @model_router.post('/recognition')
-def model_req(text: int):
+def model_req(text: str):
 	return classify(text)
