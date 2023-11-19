@@ -1,37 +1,37 @@
 [
   {
     "id": "1",
-    "name": "Тикет 1",
+    "name": "Связь с оператором",
     "order": 1,
     "statusId": 1,
-    "ticketMessage": "Текст 1"
+    "ticketMessage": "I don't understand you, I need help talking to a human agent"
   },
   {
     "id": "2",
-    "name": "Тикет 2",
+    "name": "Получение возврата",
     "order": 2,
     "statusId": 2,
-    "ticketMessage": "Текст 2"
+    "ticketMessage": "I need a refund, can I get one?"
   },
   {
     "id": "3",
-    "name": "Тикет 3",
+    "name": "Вопрос оплаты",
     "order": 3,
     "statusId": 3,
-    "ticketMessage": "Текст 3"
+    "ticketMessage": "I have a problem when trying to pay for my order, can you report it?"
   },
   {
     "id": "4",
-    "name": "Тикет 4",
+    "name": "Восстановление пароля",
     "order": 2,
     "statusId": 1,
-    "ticketMessage": "Текст 4"
+    "ticketMessage": "someone stole my password and i want to reset it"
   },
   {
     "id": "5",
-    "name": "Тикет 5",
+    "name": "Удаление аккаунта",
     "order": 1,
     "statusId": 2,
-    "ticketMessage": "Текст 5"
+    "ticketMessage": "i changed my mind, whatshould i do to cancel my profile?"
   }
 ]
