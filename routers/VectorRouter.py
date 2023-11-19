@@ -41,7 +41,6 @@ def model_req(text: str, db: Session = Depends(get_db)):
     if available_employees.empty:
         return {"error": "No employees"}
 
-    # Находим работника с наименьшим количеством задач
     employee_with_least_tasks = available_employees.loc[available_employees['task_counter'].idxmin()]
     send_to_employee = employee_with_least_tasks['employee']
 
@@ -53,10 +52,8 @@ def model_req(text: str, db: Session = Depends(get_db)):
         send_to=send_to_employee
     )
 
-    # Увеличиваем счетчик задач для выбранного работника
     available_employees.loc[employee_with_least_tasks.name, 'task_counter'] += 1
     available_employees.to_csv('vectors/employers.csv', index=False)
-    df = pd.read_csv('vectors/employers.csv')
 
     return {
         "request": request_result,
