@@ -135,7 +135,7 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 10px;
-    background-image: url("/src/assets/images/submit_button2.png");
+    background-image: url("/src/assets/images/arrow-up.png");
     background-size: cover;
     color: white;
     border: none;
