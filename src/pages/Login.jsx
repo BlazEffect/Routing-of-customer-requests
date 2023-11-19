@@ -13,25 +13,16 @@ export default function Login() {
     event.preventDefault();
     setAuthStatus('');
 
-    const jwt = axios.post('/api/token?username=' + loginInput + '&password=' + password,
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': '*',
-          'Access-Control-Allow-Methods': 'POST',
-          'Access-Control-Allow-Credentials': true,
-          'Sec-Fetch-Mode': 'no-cors',
-          'Sec-Fetch-Site': 'same-site'
-        }}).then((data) => {
-          setAuthStatus('Успешных вход')
-          localStorage.setItem('jwt', data.data.access_token);
-        }).catch(error => {
-          if (error.response) {
-            if (error.response.status === 401) {
-              setAuthStatus('Проверьте логин или пароль')
-            }
-          }});
+    axios.post('/api/token?username=' + loginInput + '&password=' + password).then((data) => {
+      setAuthStatus('Успешных вход');
+      localStorage.setItem('jwt', data.data.access_token);
+    }).catch(error => {
+      if (error.response) {
+        if (error.response.status === 401) {
+          setAuthStatus('Проверьте логин или пароль');
+        }
+      }
+    });
   }
 
   return (

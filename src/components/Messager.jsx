@@ -1,21 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Message from './Message.jsx';
-import data from '../data/messages.json';
 
 export default function Messager({ messages, setMessage }) {
-  useEffect(() => {
-    setMessage(data);
-  });
-
   useEffect(() => {
     if (Object.keys(messages).length !== 0) {
       setMessage(messages);
     }
   }, [messages]);
-
-  const fetchMessages = () => {
-
-  }
 
   return (
     <div className="chat-body">

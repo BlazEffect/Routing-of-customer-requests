@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
+import ticketNames from '../data/ticket_name.json';
 
-export default function MessageSend({ sendTo, messages, setMessage, setConsultantName, setTicketName, setImportance }) {
+export default function MessageSend({ sendTo, messages, setMessage, setConsultantName }) {
   const [userInput, setUserInput] = useState('');
 
   const addMessage = (event) => {
@@ -9,44 +10,51 @@ export default function MessageSend({ sendTo, messages, setMessage, setConsultan
 
     const currentDate = new Date();
 
-    const newMessageId = Object.keys(messages).length + 1;
-    const newMessage = {
-      id: newMessageId,
-      senderName: 'Тест 2',
+    const newUserMessageId = Object.keys(messages).length + 1;
+    const newUserMessage = {
+      id: newUserMessageId,
+      senderName: 'Пользователь',
       sendTo: sendTo,
       createdAt: currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       messageText: userInput
     };
 
-    const newMessages = { ...messages, [newMessageId]: newMessage };
+    const newUserMessages = { ...messages, [newUserMessageId]: newUserMessage };
 
-    setMessage(newMessages);
+    setMessage(newUserMessages);
 
-    const jwt = axios.post('/api/model/recognition/?text=' + userInput,
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': '*',
-          'Access-Control-Allow-Methods': 'POST',
-          'Access-Control-Allow-Credentials': true,
-          'Sec-Fetch-Mode': 'no-cors',
-          'Sec-Fetch-Site': 'same-site'
-        }}).then((data) => {
-          setConsultantName(data.data.consult);
-          setTicketName(data.data.request);
+    axios.post('/api/model/recognition/?text=' + userInput).then((data) => {
+      let importance = '';
 
-          switch (data.data.importance) {
-            case 'standart_priority':
-              setImportance('Обычный приоритет');
-              break;
-            case 'medium_priority':
-              setImportance('Средний приоритет');
-              break;
-            case 'high_priority':
-              setImportance('Высокий приоритет');
-              break;
-          }
+      switch (data.data.importance) {
+        case 'standart_priority':
+          importance = 'Обычный приоритет';
+          break;
+        case 'medium_priority':
+          importance = 'Средний приоритет';
+          break;
+        case 'high_priority':
+          importance = 'Высокий приоритет';
+          break;
+      }
+
+      const ticketMessage = 'Мы обработали ваш запрос: Ваш менеджер: ' + data.data.sent_to_employee + ' Приоиртет' +
+        ' в очереди: ' + importance + ' Тема запроса: ' + ticketNames[data.data.request];
+
+      const newAdminMessageId = Object.keys(newUserMessages).length + 1;
+      const newAdminMessage = {
+        id: newAdminMessageId,
+        senderName: 'Пользователь',
+        sendTo: 'User',
+        createdAt: currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        messageText: ticketMessage
+      };
+
+      const newAdminMessages = { ...newUserMessages, [newAdminMessageId]: newAdminMessage };
+
+      setMessage(newAdminMessages);
+
+      setConsultantName(data.data.sent_to_employee);
     });
 
     setUserInput('');
