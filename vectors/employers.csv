@@ -1,11 +1,11 @@
 Unnamed: 0.1,Unnamed: 0,employee,payment_issue,create_account,contact_customer_service,get_invoice,track_order,get_refund,contact_human_agent,recover_password,change_order,delete_account,complaint,check_invoices,review,check_refund_policy,delivery_options,check_cancellation_fee,track_refund,check_payment_methods,switch_account,newsletter_subscription,delivery_period,edit_account,registration_problems,change_shipping_address,set_up_shipping_address,place_order,cancel_order,check_invoice,total_specializations,task_counter
-9,9,Geraldine Montoya,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,3
-7,7,Loretta Humphries,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,3
-6,6,Lissa Johnson,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,2
-5,5,Valeria Sanders,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,2
-8,8,Leo Garrett,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,2
-4,4,Harold Manalang,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,22,2
-3,3,Charmaine Roach,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,22,2
-1,1,Allan Pearson,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,28,2
-2,2,Victoria Butler,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,28,2
-0,0,Joshua Mummert,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,28,2
+9,9,Geraldine Montoya,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,4
+7,7,Loretta Humphries,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,4
+6,6,Lissa Johnson,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,4
+5,5,Valeria Sanders,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,3
+8,8,Leo Garrett,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,15,3
+4,4,Harold Manalang,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,22,3
+3,3,Charmaine Roach,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,22,3
+1,1,Allan Pearson,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,28,3
+2,2,Victoria Butler,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,28,3
+0,0,Joshua Mummert,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,28,3

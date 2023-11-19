@@ -7,3 +7,4 @@ alembic/script.py.mako
 .\vectors\random_forest_model_request.pkl
 .\vectors\random_forest_model_importance.plk
 .\vectors\vector.plk
+.env
