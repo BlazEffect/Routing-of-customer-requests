@@ -15,7 +15,9 @@ export default defineConfig({
       '/api': {
         target: process.env.API_SERVER_URL,
         changeOrigin: true,
+        secure: false,
       }
-    }
+    },
+    cors: false
   }
 })

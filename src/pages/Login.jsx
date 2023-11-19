@@ -1,16 +1,44 @@
 import Button from '../components/Button.jsx';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Login() {
-  const [loginInput, setLoginInput] = useState();
-  const [password, setPassword] = useState();
+  const [loginInput, setLoginInput] = useState('');
+  const [password, setPassword] = useState('');
+
+  const [authStatus, setAuthStatus] = useState('');
+
+  const auth = (event) => {
+    event.preventDefault();
+    setAuthStatus('');
+
+    const jwt = axios.post('/api/token?username=' + loginInput + '&password=' + password,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Methods': 'POST',
+          'Access-Control-Allow-Credentials': true,
+          'Sec-Fetch-Mode': 'no-cors',
+          'Sec-Fetch-Site': 'same-site'
+        }}).then((data) => {
+          setAuthStatus('Успешных вход')
+          localStorage.setItem('jwt', data.data.access_token);
+        }).catch(error => {
+          if (error.response) {
+            if (error.response.status === 401) {
+              setAuthStatus('Проверьте логин или пароль')
+            }
+          }});
+  }
 
   return (
     <div className="auth">
       <h3 className="auth__greeter-text">Вход в<br/>административную<br/>панель</h3>
 
-      <form action="" className="auth-form">
+      <form onSubmit={ auth } className="auth-form">
         <input
           type="text"
           id="userLogin"
@@ -31,9 +59,9 @@ export default function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <Button className="auth__button">
-          Войти
-        </Button>
+        <p>{ authStatus }</p>
+
+        <button type="submit" className="auth__button">Войти</button>
       </form>
 
       <Link to="/">
