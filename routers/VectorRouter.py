@@ -54,7 +54,7 @@ def model_req(text: str, db: Session = Depends(get_db)):
 
     available_employees.loc[employee_with_least_tasks.name, 'task_counter'] += 1
     available_employees.to_csv('vectors/employers.csv', index=False)
-
+    del df
     return {
         "request": request_result,
         "importance": importance_result,
