@@ -6,7 +6,7 @@
 
 .chat-header {
     background-color: #fff;
-    padding: 10px 0;    
+    padding: 10px 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -25,6 +25,12 @@
 }
 
 .info__operator-name {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.info__importance {
     margin-left: 10px;
     display: inline-block;
     font-size: 20px;

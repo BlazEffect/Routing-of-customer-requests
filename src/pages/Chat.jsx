@@ -8,6 +8,9 @@ import { Link } from 'react-router-dom';
 
 export default function Chat() {
   const [messages, setMessage] = useState([]);
+  const [consultantName, setConsultantName] = useState('Ваш куратор');
+  const [ticketName, setTicketName] = useState('');
+  const [importance, setImportance] = useState('');
 
   return (
     <div className="chat">
@@ -22,7 +25,13 @@ export default function Chat() {
           </div>
 
           <div className="info__operator-name">
-            Ваш куратор
+            { consultantName }
+            <br/>
+            { ticketName }
+          </div>
+
+          <div className="info__importance">
+            { importance }
           </div>
         </div>
 
@@ -32,7 +41,7 @@ export default function Chat() {
       <Messager messages={messages} setMessage={setMessage}/>
 
       <div className="chat-footer">
-        <MessageSend sendTo="Admin" messages={messages} setMessage={setMessage}/>
+        <MessageSend sendTo="Admin" messages={messages} setMessage={setMessage} setConsultantName={setConsultantName} setTicketName={setTicketName} setImportance={setImportance}/>
       </div>
     </div>
   )
